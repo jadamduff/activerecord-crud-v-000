@@ -24,13 +24,17 @@ def can_be_created_with_a_hash_of_attributes
   movie.save
 end
 
-def can_be_created_in_a_block(args = __)
+def can_be_created_in_a_block(args = {director: "George Roy Hill", lead: "Paul Newman", in_theaters: false})
   # If no arguments are passed, use default values:
   # title == "Home Alone"
   # release_date == 1990
 
   Movie.create do |m|
-    __
+    m.title = "Home Alone"
+    m.release_date = 1990
+    m.director = args[:director]
+    m.lead = args[:lead]
+    m.in_theaters = args[:in_theaters]
   end
 end
 
