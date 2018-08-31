@@ -20,7 +20,7 @@ def can_be_created_with_a_hash_of_attributes
       lead: "Paul Newman",
       in_theaters: false
   }
-  movie = Movie.create(attributes)
+  movie = Movie.new(attributes)
   movie.save
 end
 
