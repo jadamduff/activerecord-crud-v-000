@@ -24,7 +24,7 @@ def can_be_created_with_a_hash_of_attributes
   movie.save
 end
 
-def can_be_created_in_a_block(title: "The Room", release_date: "2015")
+def can_be_created_in_a_block(title: "The Room", release_date: 2015)
   # If no arguments are passed, use default values:
   # title == "Home Alone"
   # release_date == 1990
